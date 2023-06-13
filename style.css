@@ -1,0 +1,228 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+a{
+  text-decoration:none;
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:9999;
+  background: #FFF;
+  border-bottom:1px solid  #95b0ff;
+ 
+  .toggle, .brand {
+    display: inline-block;
+  }
+  .link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+     
+     color: #2B00F7;
+    &:hover,&:active {
+      opacity:.7;
+    }
+  }
+  .brand {
+    width: 10em;
+    text-align: center;
+    padding: 1em;
+    background:#7559fa;
+    color:#FFF;
+    font-weight:bold;
+    text-transform:uppercase;
+    &:hover{
+      opacity:.7;
+    }
+  }
+  .toggle {
+    padding: 1em;
+    color: black;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 48em) {
+    .navbar {
+      display: flex;
+      .center {
+        display: flex;
+        flex: 1;
+        justify-content:center;
+      }
+      .link {
+          width: auto;
+      }
+      
+      .toggle {
+        display: none;
+      }
+    }
+}
+
+.navbar {
+  div {
+    display: none;
+    @media (min-width: 48em) {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+.navbar.active {
+  .toggle {
+    background: seagreen;
+    color: white;
+  }
+  div {
+    display: block;
+  }
+}
+}
+
+
+
+
+
+
+.container{
+  
+   max-width:1200px;
+   display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+ 
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content:center;
+  margin:100px auto;
+  
+  .news-item{
+    width:300px;
+    height:500px;
+  
+     margin:15px;
+     -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.55);
+-moz-box-shadow:    0px 0px 30px 0px rgba(50, 50, 50, 0.55);
+box-shadow:         0px 0px 30px 0px rgba(50, 50, 50, 0.55);
+    border-radius: 5px;
+    .news-image{
+      width:100%;
+      height:200px;
+      background-size:cover;
+      border-top-left-radius:5px;
+      border-top-right-radius:5px;
+      position:relative;
+      ul{
+        margin:0;
+        padding:0;
+        position:absolute;
+        right:0;
+        top:0;
+        bottom:0;
+        height:100%;
+      
+        background: #95b0ff;
+    
+        border-top-right-radius:5px;
+        
+       
+        li{
+          list-style:none;
+          color:#FFF;
+          padding:5px 10px;
+        }
+      }
+      
+    }
+    .news-infor-content{
+      padding:0 10px;
+    }
+    .time-to-read{
+      padding:0;
+      margin:10px 0 0;
+      font-size:.7rem;
+      max-width:110px;
+      color: #999;
+      border-bottom:1px solid;
+      
+    }
+    
+    .tittle ,.paragraph{
+      max-width:300px;
+      padding:0;
+      margin:0;
+      font-size:.9rem;
+    }
+    
+    .tittle {
+          color: #333333;
+          border-width: 0px;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    filter: blur(0px);
+    font-size: 24px;
+    text-transform: none;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    font-style: normal;
+    z-index: 46;
+   font-family: 'Roboto', sans-serif;
+    line-height: 24px;
+    overflow: visible;
+      
+    }
+    
+    .paragraph{
+       font-size:.9rem;
+       color: #8b8b8b;
+      font-weight:900;
+    }
+    
+    .bottom-content{
+      -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    min-height: 55px;
+        color: #999;
+      opacity:.7;
+      font-size:.7rem;
+      
+
+    }
+  }
+  
+}
